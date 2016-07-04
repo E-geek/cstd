@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript standarts</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../extra/README.md.html' title='CSTD'>
+      CSTD
+    </a>
+    &raquo;
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Node</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Node
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>lib&#47;node.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/CSObject.html'>CSObject</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <p>Узел. По умолчанию готов к двусвязности
+В <code>destructor</code> записан метод для удаления ссылок</p>
+</div>
+<div class='tags'>
+</div>
+      <h2>Property Summary</h2>
+      <dl class='properties'>
+        <dt id='v-property'>
+          <span class='signature'>
+            (*)
+            <b>
+              v
+            </b>
+          </span>
+        </dt>
+        <dd class='desc'>
+          Хранимое значение 
+        </dd>
+        <dt id='n-property'>
+          <span class='signature'>
+            (Node|null)
+            <b>
+              n
+            </b>
+          </span>
+        </dt>
+        <dd class='desc'>
+          Следущий узел 
+        </dd>
+        <dt id='p-property'>
+          <span class='signature'>
+            (Node|null)
+            <b>
+              p
+            </b>
+          </span>
+        </dt>
+        <dd class='desc'>
+          Предыдущий узел 
+        </dd>
+      </dl>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#remove-dynamic'>
+        #
+(Node)
+<b>remove</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Удаление атома, отвязывание от списка, значение сохраняется 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#destructor-dynamic'>
+        #
+(null)
+<b>destructor</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Очистка атома, в std все классы обязаны иметь destructor 
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/CSObject.html'>CSObject</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/CSObject.html#destructor-dynamic'>#destructor</a>
+        </p>
+      </h2>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>(v, n, p)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <ul>
+<li>Обязательно передать значение <code>@v</code>, помещаемое в узел, Далееможно передать следущий элемент <code>n</code> и предыдущий <code>p</code> @overload constructor (v)
+  without links
+  @param {<em>} v value for save in node
+  @throw {TypeError} if <code>v</code> is undefined @overload constructor (v, n)
+  with next link only
+  @param {</em>} v value for save in node
+  @param <a href='../class/Node.html'>Node</a> n link to next node or null
+  @throw {TypeError} if <code>v</code> is undefined
+  @throw {TypeError} if <code>n</code> is not node @overload constructor (v, n, p)
+  with prev link only
+  @param {<em>} v value for save in node
+  @param {null} n no link
+  @param <a href='../class/Node.html'>Node</a> p link to prev node or null
+  @throw {TypeError} if <code>v</code> is undefined
+  @throw {TypeError} if <code>n</code> is not null
+  @throw {TypeError} if <code>p</code> is not node @overload constructor (v, n, p)
+  with next and prev link
+  @param {</em>} v value for save in node
+  @param <a href='../class/Node.html'>Node</a> n link to next node or null
+  @param <a href='../class/Node.html'>Node</a> p link to prev node or null
+  @throw {TypeError} if <code>v</code> is undefined
+  @throw {TypeError} if <code>n</code> is not node and not null
+  @throw {TypeError} if <code>p</code> is not node and not null</li>
+</ul>
+
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='remove-dynamic'>
+      #
+(Node)
+<b>remove</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Удаление атома, отвязывание от списка, значение сохраняется</p>
+</div>
+<div class='tags'>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Node.html'>Node</a></tt>
+      )
+      &mdash;
+      <span class='desc'>this </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='destructor-dynamic'>
+      #
+(null)
+<b>destructor</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Очистка атома, в std все классы обязаны иметь destructor</p>
+</div>
+<div class='tags'>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      <tt>null</tt>
+    </li>
+  </ul>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.0
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

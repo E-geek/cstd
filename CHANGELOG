@@ -1,0 +1,31 @@
+
+v0.0.0a12 2016-07-01 Add docs, small fix tests
+
+v0.0.0a11 2016-06-16 Move test libs to devDependencies
+
+v0.0.0a10 2016-06-14 Success add Container, Caches (Base, LRU)
+
+v0.0.0a9 2016-04-20 Success add CircularList
+
+v0.0.0a8 2016-04-20 Success add List
+
+v0.0.0a7 2016-04-04 Success add Deque, small refactor Queue
+
+v0.0.0a6 2016-03-29 Success add Stack, refactor Queue
+
+v0.0.0a5 2016-03-29 Success add Queue
+
+v0.0.0a4 2016-03-29 Emitter for Map-unsupported system complete
+
+v0.0.0a3 2016-03-29 Change structure: move libs to lib, create map for libs (cstd.coffee).
+                    For js-based run nodes create cstd.js and it is main file
+
+v0.0.0a2 2016-03-29 Added unofficial translation of the license text.
+
+v0.0.0a1 2016-03-29 Init project. Success create and test:
+ * CSObject
+ * Node 
+ * CSEmitter
+ * CSEvent
+ * CSError
+ * CSDate

@@ -1,0 +1,46 @@
+{
+  "name": "cstd",
+  "version": "0.0.1",
+  "description": "CoffeeScript Standart Library",
+  "main": "cstd.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build-js": "coffee -c cstd.coffee",
+    "test": "mocha -c -r chai --compilers coffee:coffee-script/register tests ",
+    "cover": "istanbul cover -x 'lib/**' ./node_modules/.bin/_mocha -- --compilers coffee:coffee-script/register -r coffee-coverage/register-istanbul -r chai tests",
+    "lint": "coffeelint lib/**",
+    "docs": "codo -p lib/* -t 'CoffeeScript standarts' -n CSTD"
+  },
+  "keywords": [
+    "coffeescript",
+    "std",
+    "cstd",
+    "stl",
+    "standart",
+    "library"
+  ],
+  "author": "Louter",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "coffee-script": "=1.9.3"
+  },
+  "devDependencies": {
+    "chai": "=3.5.0",
+    "codo": "^2.1.0",
+    "coffee-coverage": "^1.0.1",
+    "coffeelint": "^1.15.7",
+    "istanbul": "^0.4.3",
+    "mocha": "=2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E-geek/cstd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/E-geek/cstd/issues"
+  },
+  "homepage": "https://github.com/E-geek/cstd#readme"
+}

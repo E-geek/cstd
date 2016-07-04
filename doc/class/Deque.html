@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript standarts</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../extra/README.md.html' title='CSTD'>
+      CSTD
+    </a>
+    &raquo;
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Deque</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Deque
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>lib&#47;deque.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/Container.html'>Container</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <p>Двунаправленная очередь. Её методы <code>push</code> и <code>pop</code> ничем не
+отличаются от методов <code>Queue</code>, но есть ещё и втавка в начало
+и получение с хвоста</p>
+</div>
+<div class='tags'>
+</div>
+      <h2>Property Summary</h2>
+      <dl class='properties'>
+        <dt id='_f-property'>
+          <span class='signature'>
+            (Node)
+            <b>
+              _f
+            </b>
+          </span>
+        </dt>
+        <dd class='desc'>
+          начало очереди для взятия O(1) 
+        </dd>
+        <dt id='_b-property'>
+          <span class='signature'>
+            (Node)
+            <b>
+              _b
+            </b>
+          </span>
+        </dt>
+        <dd class='desc'>
+          конец очереди для добавления O(1) 
+        </dd>
+      </dl>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='pushBack-variable'>
+    pushBack
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'></code></pre>
+    <div class='docstring'>
+  <p>Синоним <code>Deque::push(some)</code></p>
+</div>
+<div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>some</span>
+      <span class='type'>
+        (
+          <tt>*</tt>
+        )
+      </span>
+      &mdash;
+      <span class='desc'>добавляемая в конец сущность </span>
+    </li>
+  </ul>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если аргумент не один </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'><code>this</code> </span>
+    </li>
+  </ul>
+</div>
+  </dd>
+  <dt id='popFront-variable'>
+    popFront
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'></code></pre>
+    <div class='docstring'>
+  <p>Синоним для <code>Deque::pop()</code></p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>Error</tt>
+      )
+      &mdash;
+      <span class='desc'>если список пуст </span>
+    </li>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если переданы аргументы </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>*</tt>
+      )
+      &mdash;
+      <span class='desc'>значение взятое с самого начала </span>
+    </li>
+  </ul>
+</div>
+  </dd>
+</dl>
+      <h2>Class Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#fromArray-static'>
+        .
+(Deque)
+<b>fromArray</b><span>(array)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Создаёт очередь с объектами из массива, но ругается если что не так 
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#push-dynamic'>
+        #
+(Deque)
+<b>push</b><span>(some)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Добавление <em>одного</em> элемента <code>some</code> в очередь (возвращает очередь) 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#pushFront-dynamic'>
+        #
+(Deque)
+<b>pushFront</b><span>(some)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Вставляет сущность <code>some</code> в начало списка. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#pop-dynamic'>
+        #
+(*)
+<b>pop</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Получение и изъятие первого элемента из очереди, не принимает аргументов 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#popBack-dynamic'>
+        #
+(*)
+<b>popBack</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Получает последнее значение в списке, изымая его 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#add-dynamic'>
+        #
+(Deque)
+<b>add</b><span>(first, list...)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Добавляет подряд переданные элементы в очередь, принимая только набор аргументов.
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#clear-dynamic'>
+        #
+(Deque)
+<b>clear</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Очищает очередь ото всех узлов. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#destructor-dynamic'>
+        #
+(null)
+<b>destructor</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Разрушает очередь, очищая её и все ссылки внутри неё 
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/Container.html'>Container</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/Container.html#copy-dynamic'>#copy</a>
+          <a href='../class/Container.html#values-dynamic'>#values</a>
+          <a href='../class/Container.html#has-dynamic'>#has</a>
+          <a href='../class/Container.html#toJSON-dynamic'>#toJSON</a>
+          <a href='../class/Container.html#destructor-dynamic'>#destructor</a>
+          <a href='../class/Container.html#isContainer-static'>.isContainer</a>
+          <a href='../class/Container.html#fromJSON-static'>.fromJSON</a>
+        </p>
+      </h2>
+      <h2>Class Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='fromArray-static'>
+      .
+(Deque)
+<b>fromArray</b><span>(array)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Создаёт очередь с объектами из массива, но ругается если что не так</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>Error</tt>
+      )
+      &mdash;
+      <span class='desc'>если аргумент не 1 </span>
+    </li>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если аргумент не представляет собой массив </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'>новая очередь </span>
+    </li>
+  </ul>
+</div>
+  </div>
+</div>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Конструктор очереди просто собирает её, не принимая аргументов</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если переданы аргументы </span>
+    </li>
+  </ul>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='push-dynamic'>
+      #
+(Deque)
+<b>push</b><span>(some)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Добавление <em>одного</em> элемента <code>some</code> в очередь (возвращает очередь)</p>
+</div>
+<div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>some</span>
+      <span class='type'>
+        (
+          <tt>*</tt>
+        )
+      </span>
+      &mdash;
+      <span class='desc'>добавляемая в конец сущность </span>
+    </li>
+  </ul>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если аргумент не один </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'><code>this</code> </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='pushFront-dynamic'>
+      #
+(Deque)
+<b>pushFront</b><span>(some)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Вставляет сущность <code>some</code> в начало списка.</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если аргумент не один </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'><code>this</code> </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='pop-dynamic'>
+      #
+(*)
+<b>pop</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Получение и изъятие первого элемента из очереди, не принимает аргументов</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>Error</tt>
+      )
+      &mdash;
+      <span class='desc'>если список пуст </span>
+    </li>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если переданы аргументы </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>*</tt>
+      )
+      &mdash;
+      <span class='desc'>значение взятое с самого начала </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='popBack-dynamic'>
+      #
+(*)
+<b>popBack</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Получает последнее значение в списке, изымая его</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>Error</tt>
+      )
+      &mdash;
+      <span class='desc'>если список пуст </span>
+    </li>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если переданы аргументы </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>*</tt>
+      )
+      &mdash;
+      <span class='desc'>значение взятое с самого хвоста </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='add-dynamic'>
+      #
+(Deque)
+<b>add</b><span>(first, list...)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Добавляет подряд переданные элементы в очередь, принимая только
+набор аргументов. Массив переданный внутрь будет расценен
+самостоятельной сущностью.</p>
+</div>
+<div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>args...</span>
+      <span class='type'>
+        (
+          <tt>*...</tt>
+        )
+      </span>
+      &mdash;
+      <span class='desc'>аргументы для добавления в стопку </span>
+    </li>
+  </ul>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если не переданы значения </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'><code>this</code> </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='clear-dynamic'>
+      #
+(Deque)
+<b>clear</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Очищает очередь ото всех узлов. И не принимает аргументов</p>
+</div>
+<div class='tags'>
+  <h3>Throws:</h3>
+  <ul class='throw'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>TypeError</tt>
+      )
+      &mdash;
+      <span class='desc'>если переданы аргументы </span>
+    </li>
+  </ul>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt><a href='../class/Deque.html'>Deque</a></tt>
+      )
+      &mdash;
+      <span class='desc'><code>this</code> </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='destructor-dynamic'>
+      #
+(null)
+<b>destructor</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Разрушает очередь, очищая её и все ссылки внутри неё</p>
+</div>
+<div class='tags'>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      <tt>null</tt>
+    </li>
+  </ul>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.0
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>
