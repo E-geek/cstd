@@ -1,4 +1,6 @@
 # Библиотека стандартных классов для кофескрипта/яваскрипта
+[![Build Status](https://travis-ci.org/E-geek/cstd.svg?branch=master)](https://travis-ci.org/E-geek/cstd)
+[![Coverage Status](https://coveralls.io/repos/github/E-geek/cstd/badge.svg?branch=master)](https://coveralls.io/github/E-geek/cstd?branch=master)
 
 ## Оглавление
 
